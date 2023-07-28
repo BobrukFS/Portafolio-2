@@ -1,0 +1,38 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.desc{
+    padding: 2rem;
+    background-color: map-get($map: $colores, $key: primario );
+    display: flex;
+    flex-direction: column;
+
+
+    &__p{
+          margin-bottom: 2rem;
+          color: white;
+          
+          span {
+            color: map-get($map: $colores, $key: secundario);
+            font-weight: 700;
+          }
+        }
+        
+        &__img{
+          align-self: center;
+          position: relative;
+        }
+
+        .desc__circle{
+         
+         width: 22rem;
+         height: 22rem;
+         background-color: map-get($map: $colores, $key: secundario);
+         background-position: 40% ;
+         border-radius: 50%;
+         background-image: url('src/assets/photo.png');
+         background-size: cover;
+         position: absolute;
+         top: 1.5rem;
+         left: 6%;
+        }
+}

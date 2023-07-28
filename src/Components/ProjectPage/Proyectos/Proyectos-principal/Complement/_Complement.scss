@@ -1,0 +1,45 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.complement{
+    padding: 1rem;
+    border: 1px dashed map-get($map: $colores, $key: secundario);
+    border-radius: .7rem;
+    box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.295) inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 30rem;
+    width: 100%;
+    
+   
+    ul{
+        margin: .5rem 0rem 2rem;
+        padding: 0rem 2rem;
+        li{
+            font-size: 1.4rem;
+            color: map-get($map: $colores, $key: secundario);
+            span{
+                color: map-get($map: $colores, $key: terciario);
+            }
+           
+        }
+    }
+
+    &__title{
+        color: map-get($map: $colores, $key: secundario);
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    &__desc{
+        font-size: 1.6rem;
+        color: map-get($map: $colores, $key: terciario);
+    }
+
+    &__tec{
+        align-self: end;
+        font-size: 1.4rem;
+        color: map-get($map: $colores, $key: secundario);
+        font-weight: 700;
+    }
+}

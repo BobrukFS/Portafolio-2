@@ -1,0 +1,33 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.skills {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    &__title{
+        font-size: 1.8rem;
+        color: map-get($map:$colores, $key: secundario);
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    &__p{
+        margin-bottom: 2rem;
+    }
+
+    &__tec{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__container-title{
+        display: flex;
+        gap: 1rem;
+        align-self: center;
+       
+    }
+}

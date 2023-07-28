@@ -1,0 +1,14 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.project{
+    padding: 2rem;
+    
+    &__title{
+        font-size: 3.5rem;
+        color: map-get($map: $colores, $key: primario);
+    }
+
+    &__desc{
+        margin: 2rem 0rem;
+    }
+}

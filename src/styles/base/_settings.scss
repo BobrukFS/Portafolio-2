@@ -1,0 +1,25 @@
+$colores : (
+    "primario" : #333333,
+    "secundario" : #1B8D87,
+    "terciario" : #706b6b,
+    "rojo" : #ef6340,
+    "amarillo" : rgb(253, 184, 36),
+    "verde" : #119397,
+    "lineas" : #e0d2b2,
+    "intro" : #f7f5f1,
+    "marron" : #522e2c,
+);
+
+$fuentes : (
+    "primaria" : Lunasima,
+    "secundaria": Caveat,
+);
+
+body {
+    font-family: map-get($map: $fuentes, $key: primaria);
+}
+
+p {
+    color: map-get($map: $colores, $key: terciario);
+    font-size: 1.6rem;
+}

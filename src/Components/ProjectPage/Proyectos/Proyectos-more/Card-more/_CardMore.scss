@@ -1,0 +1,58 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.card-more{
+    background-color: white;
+    box-shadow: 4px 4px 5px 1px rgb(0, 0, 0) ;
+    padding: 1rem;
+    width: 80vw;
+    max-width: 30rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: .7rem;
+
+    &__icons{
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+        color: map-get($map: $colores, $key: primario);
+
+        div{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+  
+
+    p{
+        font-size: 1.2rem;
+        color: map-get($map: $colores, $key: primario);
+        font-weight: 700;
+
+        &:nth-child(3){
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        &:nth-child(2){
+            color: map-get($map: $colores, $key: secundario);
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__tec{
+        align-self: end;
+        font-size: 1.2rem;
+        color: map-get($map: $colores, $key: terciario);
+        font-weight: 700;
+    }
+}
+
+.fa__folder{
+    color: map-get($map: $colores, $key: secundario);
+}

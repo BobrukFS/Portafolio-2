@@ -1,0 +1,66 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.tec {
+    display: flex;
+    flex-direction: column;
+    background-color: map-get($map: $colores, $key: intro);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 2rem;
+    box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.295);
+    align-items: center;
+    max-width: 40rem;
+    width: fit-content;
+
+    div{
+        text-align: center;
+    }
+
+    &__icon{
+        font-size: 2.5rem;
+        background-color: map-get($map: $colores, $key: rojo);
+        color: white;
+        padding: 1.2rem 1.5rem;
+        border-radius: 50%;
+        margin-bottom: .5rem;
+
+        &--backend{
+            background-color: map-get($map: $colores, $key: verde);
+        }
+
+        &--tools{
+            background-color: map-get($map: $colores, $key: amarillo);
+        }
+    }
+
+    &__title{
+        color: map-get($map: $colores, $key: rojo);
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+  
+
+        &--Backend{
+            color: map-get($map: $colores, $key: verde);
+        }
+
+        &--Tools{
+            color: map-get($map: $colores, $key: amarillo);
+        }
+    }
+
+    &__img{
+        border-radius: .7rem;
+    }
+
+    &__leg{
+        color: white;
+        font-size: 3rem;
+    }
+
+    &__container{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

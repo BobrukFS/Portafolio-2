@@ -1,0 +1,36 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    max-width: 50rem;
+
+    &__container{
+        padding: 2rem;
+        text-align: center;
+    }
+
+    &__title{
+        color: map-get($map: $colores, $key: primario);
+        font-size: 3.5rem;
+    }
+
+    &__subtitle{
+        color: map-get($map: $colores, $key: secundario);
+        font-size: 2rem;
+        margin: 1rem 0rem;
+    }
+
+    &__p{
+        font-size: 1.8rem;
+        text-align: center;
+        
+    }
+
+        &__form{
+            margin: 2rem 0rem;
+        }
+}

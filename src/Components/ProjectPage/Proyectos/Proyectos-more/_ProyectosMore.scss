@@ -1,0 +1,24 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.proyectos-more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: map-get($map: $colores, $key: primario);
+    padding: 2rem;
+
+    &__title{
+        font-size: 2rem;
+        color: map-get($map: $colores, $key: secundario);
+        margin-bottom: 2rem;
+    }
+
+    &__container{
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+     
+  
+        
+    }
+}

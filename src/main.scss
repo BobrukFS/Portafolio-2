@@ -1,0 +1,24 @@
+// Importaciones
+
+// Ui settins
+@use 'src/styles/base/_normalize.scss';
+@use 'src/styles/base/_settings.scss';
+// Componentes
+@use 'src/Components/Header/_Header.scss';
+@use 'src/Components/Header/ButtonMenu/_ButtonMenu.scss';
+@use 'src/Components/HomePage/Intro/_Intro.scss';
+@use 'src/Components/AboutPage/About/_About.scss';
+@use 'src/Components/AboutPage/About/Desc/_Desc.scss';
+@use 'src/Components/AboutPage/About/Skills/_Skills.scss';
+@use 'src/Components/AboutPage/About/Skills/Tec/_Tec.scss';
+@use 'src/Components/ProjectPage/Proyectos/_Proyectos.scss';
+@use 'src/Components/ProjectPage/Proyectos/Proyectos-principal/_ProyectosPrincipal.scss';
+@use 'src/Components/ProjectPage/Proyectos/Proyectos-principal/Card/_Card.scss';
+@use 'src/Components/ProjectPage/Proyectos/Proyectos-principal/Complement/_Complement.scss';
+@use 'src/Components/ProjectPage/Proyectos/Proyectos-principal/Pagination/_Pagination.scss';
+@use 'src/Components/ProjectPage/Proyectos/Proyectos-more/_ProyectosMore.scss';
+@use 'src/Components/ProjectPage/Proyectos/Proyectos-more/Card-more/_CardMore.scss';
+@use 'src/Components/ContactPage/Contact/_Contact.scss';
+@use 'src/Components/ContactPage/Contact/Contact-Form/ContactForm.scss';
+@use 'src/Components/Footer/_Footer.scss';
+@use 'src/Components/Header/Nav/_Nav.scss';

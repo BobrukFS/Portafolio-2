@@ -1,0 +1,33 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.project-main{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    
+    .arrow{
+        position: absolute;
+        z-index: 5;
+  
+       bottom: -5rem;
+       left: -3rem;
+        width: 9rem;
+        transform: rotate(50);
+    }
+}
+
+ 
+.project-complement{
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.swiper{
+    border-radius: .9rem;
+
+   background-color: transparent;
+}
+
+
