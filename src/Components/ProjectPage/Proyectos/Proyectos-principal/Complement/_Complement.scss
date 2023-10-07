@@ -1,25 +1,25 @@
 @use 'src/styles/base/_settings.scss' as *;
 
 .complement{
-    padding: 1rem;
-    border: 1px dashed map-get($map: $colores, $key: secundario);
-    border-radius: .7rem;
-    box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.295) inset;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 30rem;
-    width: 100%;
-    
+    height: 60%;
+    min-height: 60%;
+    max-height: 60%;
+    background-color: map-get($map: $colores, $key: primario);
+    z-index: 1;
+  
    
     ul{
         margin: .5rem 0rem 2rem;
-        padding: 0rem 2rem;
+        padding: 0rem 0rem 0rem 2rem;
         li{
             font-size: 1.4rem;
             color: map-get($map: $colores, $key: secundario);
             span{
-                color: map-get($map: $colores, $key: terciario);
+                color:  white;
             }
            
         }
@@ -28,18 +28,145 @@
     &__title{
         color: map-get($map: $colores, $key: secundario);
         font-weight: 700;
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
     }
 
     &__desc{
         font-size: 1.6rem;
-        color: map-get($map: $colores, $key: terciario);
+        color: white;
     }
 
     &__tec{
-        align-self: end;
-        font-size: 1.4rem;
-        color: map-get($map: $colores, $key: secundario);
-        font-weight: 700;
+        align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+
+        p{
+            text-align: center;
+            font-size: 1.4rem;
+            background-color: map-get($map: $colores, $key: lineas);
+            color: white;
+            padding: .5rem;
+            border-radius: .7rem;
+            
+        }
     }
+
+    .complement__icons{
+        display: flex;
+        justify-content: center;
+      
+        gap: 1rem;
+        color: map-get($map: $colores, $key: secundario);
+    }
+
+    .complement__icon{
+        font-size: 2.5rem;
+    
+    }
+
+    &__info-more{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__icon-tec{
+        border-radius: .5rem;
+        height: 2.5rem;
+    }
+}
+
+
+@media (min-width: 1024px) { 
+    .complement{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        max-height: 100%;
+        grid-column: 6/9;
+        position: relative;
+        padding: 0;
+        justify-content: space-between;
+
+        &__info{
+            display: flex;
+            flex-direction: column;
+            right: 5rem;
+            width: 150%;
+
+            &-more{
+                width: 100%;
+                justify-content: end;
+             
+            }
+        }
+
+        ul{
+            margin: 0;
+            background-color: map-get($map: $colores, $key: primario);
+            padding: 0rem 0rem 1rem 4rem;
+            border-radius:  0 0 .8rem 0.8rem;
+            box-shadow: 4px 4px 4px 0px map-get($map: $sombras, $key: negra);
+
+          
+        }
+
+        .complement__icons{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .complement__icon{
+            font-size: 3.5rem;
+        
+            top: 0;
+
+            &-tec{
+                height: 3rem;
+            }
+        }
+
+        &__title{
+            align-self: end;
+            color: map-get($map: $colores, $key: primario);
+            font-size: 3.5rem;
+            margin: 0;
+            margin-top: 4rem;
+        }
+
+        &__desc{
+            background-color: map-get($map: $colores, $key: primario);
+            padding: 1rem 2rem;
+            color: white;
+            border-radius: .8rem 0.8rem 0 0;
+            box-shadow: 4px 4px 4px 0px map-get($map: $sombras, $key: negra);
+        }
+
+        &__tec{
+            display: flex;
+            justify-content: end;
+          
+        }
+    }
+    
+    .complement.card__complement{
+        align-items: end;
+        .complement__title{
+            align-self: end;
+        }
+
+        .complement__info-more{
+            align-self: center;
+            
+        }
+
+    }
+
 }

@@ -1,16 +1,40 @@
 @use 'src/styles/base/_settings.scss' as *;
 
 .skills {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+    margin-top: 2rem;
+    display: flex; 
+    width: 100%;
+    
+    background-color: map-get($map: $colores, $key: intro);
+    gap: 2rem;
+
+    .skills__arrow-next, .skills__arrow-back{
+        display: none;
+    }
 
     &__title{
-        font-size: 1.8rem;
-        color: map-get($map:$colores, $key: secundario);
-        align-self: center;
-        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        border-left: 2px solid map-get($map: $colores, $key: lineas);
+        padding: 1rem 0rem;
+        padding-left: .5rem;
+       
+    }
+
+    &__title.active{
+
+        border: none;
+        border-left: 2px solid map-get($map: $colores, $key: secundario);
+        
+    }
+
+    &__titles{
+      
+        display: flex;
+        flex-direction: column;
+     
+      width: fit-content;
+      gap: 2rem;
+
     }
 
     &__p{
@@ -19,9 +43,14 @@
 
     &__tec{
         display: flex;
-        flex-direction: column;
         gap: 2rem;
-        align-items: center;
+        padding: 1rem 0rem 0rem;
+        align-items: start;
+        min-width: 63%;
+        min-height: 100%;
+        height: 100%;
+   
+   
     }
 
     &__container-title{
@@ -30,4 +59,92 @@
         align-self: center;
        
     }
+
+    &__fallback{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
 }
+
+
+
+@media (min-width: 1024px) { 
+    .skills{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+       
+    
+        
+
+        &__title{
+            display: block;
+            font-size: 2rem;
+            color: map-get($map:$colores, $key: lineas);
+            align-self: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-decoration: dashed underline 2px;
+            text-underline-offset: 3px;
+            font-family: map-get($map: $fuentes, $key: secundaria);
+            position: relative;
+            width: fit-content;
+        }
+
+        .swiper-wrapper{
+            width: 25rem;
+          
+        }
+
+    &__nav{
+        width: 7rem;
+        position: relative;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+     
+        &:nth-child(3){
+            .skills__title{
+            
+                align-self: end;
+                
+            }
+        }
+
+        &:nth-child(1){
+            .skills__title{
+            
+                align-self: start;
+                
+            }
+        }
+
+    }
+
+  
+        
+    .skills__arrow-next, .skills__arrow-back{
+        position: absolute;
+        display: flex;
+        z-index: 2;
+        min-width: 8rem;
+        height: 8rem;
+    }
+
+  .skills__arrow-back{
+       top: -9rem;
+    }
+
+    
+  .skills__arrow-next{
+    top: -9rem;
+  right: 0;
+ }
+        
+    }
+}
+

@@ -1,12 +1,31 @@
 // Importaciones
 
 // Ui settins
+
 @use 'src/styles/base/_normalize.scss';
 @use 'src/styles/base/_settings.scss';
+
 // Componentes
-@use 'src/Components/Header/_Header.scss';
-@use 'src/Components/Header/ButtonMenu/_ButtonMenu.scss';
+
+
+
+//Intro
+@use 'src/Components/HomePage/_HomePage.scss';
 @use 'src/Components/HomePage/Intro/_Intro.scss';
+
+//Footer
+@use 'src/Components/Footer/_Footer.scss';
+
+//Aside socials
+@use 'src/Components/AsideSocial/_AsideSocial.scss';
+
+//about
+@use 'src/Components/AboutPage/_AboutPage.scss';
+
+//Project
+@use 'src/Components/ProjectPage/_ProjectPage.scss';
+
+
 @use 'src/Components/AboutPage/About/_About.scss';
 @use 'src/Components/AboutPage/About/Desc/_Desc.scss';
 @use 'src/Components/AboutPage/About/Skills/_Skills.scss';
@@ -20,5 +39,10 @@
 @use 'src/Components/ProjectPage/Proyectos/Proyectos-more/Card-more/_CardMore.scss';
 @use 'src/Components/ContactPage/Contact/_Contact.scss';
 @use 'src/Components/ContactPage/Contact/Contact-Form/ContactForm.scss';
-@use 'src/Components/Footer/_Footer.scss';
-@use 'src/Components/Header/Nav/_Nav.scss';
+
+
+@use 'src/Components/AboutPage/About/Exp/_Exp.scss';
+@use 'src/Components/AboutPage/About/About-more/AboutMore.scss';
+@use 'src/Components/AboutPage/About/Study/_Study.scss';
+@use 'src/Components/AboutPage/About/Study/Estudio/_Estudio.scss';
+@use 'src/Components/AboutPage/About/Study/Estudio/Circle/_Circle.scss';

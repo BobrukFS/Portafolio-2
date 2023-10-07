@@ -6,7 +6,7 @@ function CardMore({proceso, nombre, descripcion, tecnologias}) {
         <div className="card-more">
             <div>
             <div className="card-more__icons">
-            <i class="fa-solid fa-folder"  style={{color: "#1b808d"}}></i>
+            <i className="fa-solid fa-folder"  style={{color: "#1b808d"}}></i>
             <div>
             <i className="fa-brands fa-github"></i>
             <i className="fa-solid fa-globe"></i>

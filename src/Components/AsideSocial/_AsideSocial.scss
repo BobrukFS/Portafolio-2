@@ -1,0 +1,13 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.aside-social{
+    font-size: 4rem;
+    display: flex;
+    gap: 2rem;
+   color: map-get($map: $colores, $key: secundario);
+   align-self: end;
+   margin-bottom: 2rem;
+ 
+
+  
+}

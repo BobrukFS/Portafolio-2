@@ -1,0 +1,151 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.about-more{
+    background-color: map-get($map: $colores, $key: intro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.8rem;
+    margin: 0rem 0rem 2rem;
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        color: map-get($map: $colores, $key: secundario);
+        gap: 1rem;
+        width: 100%;
+
+
+        h3 {
+            font-size: 1.6rem;
+            color: map-get($map: $colores, $key: terciario);
+            font-weight: 700;
+
+            &.active{
+                color: map-get($map: $colores, $key: secundario);
+                font-weight: 700;
+                text-decoration: underline;
+                border: none;
+                text-underline-offset: 4px;
+            }
+        }
+    }
+
+    &__main{
+        width: 100%;
+        max-width: 65rem;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+ 
+        
+
+        &.Estudios{
+            align-items: center;
+           
+        }
+    }
+
+    &__cuadrado{
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 425px) { 
+    .about-more{
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .about-more{
+        padding: 5rem 2rem 2rem;
+        min-width: 50%;
+        height: 100%;
+        max-height: 70%;
+        max-width: 70rem;
+        position: relative;
+        z-index: 1;
+
+        h3{
+            font-size: clamp(1.6rem, 1.5vw, 2rem);
+        }
+
+        &__container{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            margin-top: 2rem;
+
+            &.Estudios{
+                align-items: start;
+            }
+            
+    &::-webkit-scrollbar {
+        width: 2px;
+        border-radius: 1px dashed map-get($map: $colores, $key: lineas);  /* Ancho de la barra de desplazamiento */
+      }
+      
+      /* Estilos para el thumb (puntero) de la barra de desplazamiento */
+      &::-webkit-scrollbar-thumb {
+        background-color: map-get($map: $colores, $key: lineas); /* Color del thumb */
+        border-radius: 1px dashed map-get($map: $colores, $key: lineas); /* Radio de esquinas del thumb */
+      }
+      
+      /* Estilos para el thumb cuando está en estado hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #a0a0a0; /* Color del thumb en hover */
+      }
+        }
+
+
+        &__cuadrado{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-shadow: -4px 4px 2px 1px map-get($map: $sombras, $key: negra);
+        }
+    }
+
+
+}
+
+@media (min-width: 768px) { 
+    .about-more{
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .about-more{
+        margin: 0;
+        padding: 2rem 1rem;
+        box-shadow: -4px 4px 4px 0px map-get($map: $sombras, $key: negra);
+
+
+        &__title{
+            margin-top: 8rem;
+        }
+
+        &__container{
+            margin: 0rem;
+            padding: 0rem .5rem;
+            align-items: center;
+
+            &.Estudios{
+                margin: 2rem 0rem 0rem;
+                align-items: start;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use 'src/styles/base/_settings.scss' as *;
+
+.estudio{
+    min-width: 25rem;
+    border-left: 2px dashed map-get($map: $colores, $key: lineas);
+    padding-left: 2rem;
+    position: relative;
+
+    &__instituto{
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: map-get($map: $colores, $key: primario);
+        margin: .5rem 0rem;
+        width: fit-content;
+       
+    }
+
+    &__title{
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: map-get($map: $colores, $key: secundario);
+        width: fit-content;
+ 
+    }
+}
+
+@media (min-width: 1024px) { 
+    .estudio{
+
+    }
+}

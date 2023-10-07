@@ -2,65 +2,61 @@
 
 .tec {
     display: flex;
-    flex-direction: column;
-    background-color: map-get($map: $colores, $key: intro);
-    padding: 1rem;
-    border-radius: 1rem;
-    gap: 2rem;
-    box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.295);
-    align-items: center;
-    max-width: 40rem;
-    width: fit-content;
+    min-width: 100%;
 
-    div{
-        text-align: center;
+    &__list{
+        gap: 0rem;
+        list-style: none;
+        column-count: 2;
+        padding: 0;
+        padding: .5rem 0rem;
+        width: 100%;
+        height: 100%;
+
+        li{
+
+            width: 40%;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            color: map-get($map: $colores, $key: secundario);
+            margin-bottom: 1rem;
+
+            .tec__icon{
+                min-width: 2rem;
+                min-height: 2rem;
+            }
+        }
+      
+    
+    }
+   
+    &__p{
+        font-size: 1.2rem;
+        font-weight: 600;
     }
 
-    &__icon{
-        font-size: 2.5rem;
-        background-color: map-get($map: $colores, $key: rojo);
-        color: white;
-        padding: 1.2rem 1.5rem;
-        border-radius: 50%;
-        margin-bottom: .5rem;
+   
+}
 
-        &--backend{
-            background-color: map-get($map: $colores, $key: verde);
+
+@media (min-width: 1024px) { 
+    .tec{
+        gap: .5rem;
+        max-width: 100%;
+        width: 25rem;
+
+
+        div{
+            min-width: 10rem;
+     
         }
 
-        &--tools{
-            background-color: map-get($map: $colores, $key: amarillo);
-        }
-    }
-
-    &__title{
-        color: map-get($map: $colores, $key: rojo);
-        font-size: 1.8rem;
-        margin-bottom: .5rem;
-  
-
-        &--Backend{
-            color: map-get($map: $colores, $key: verde);
+        &__container{
+            justify-content: center;
+            
         }
 
-        &--Tools{
-            color: map-get($map: $colores, $key: amarillo);
-        }
-    }
-
-    &__img{
-        border-radius: .7rem;
-    }
-
-    &__leg{
-        color: white;
-        font-size: 3rem;
-    }
-
-    &__container{
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
+     
     }
 }

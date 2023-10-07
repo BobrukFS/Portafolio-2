@@ -1,21 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function Pagination() {
+function Pagination({ activeIndex }) {
+  const [paginationItems] = useState([0, 1, 2, 3,4]); // Agrega aquí los índices de los círculos
+
   return (
     <div className='pagination'>
-        <div className='pagination__border'><div className="pagination__circle">
-            </div></div>
-        <div className='pagination__border'><div className="pagination__circle">
-            </div></div>
-        <div className='pagination__border'><div className="pagination__circle">
-            </div></div>
-        <div className='pagination__border'><div className="pagination__circle">
-            </div></div>
-        <div className='pagination__border'><div className="pagination__circle">
-            </div></div>
-      
+      {paginationItems.map((itemIndex) => (
+        <div
+          key={itemIndex}
+          className={`pagination__border ${itemIndex === activeIndex ? 'active' : ''}`}
+        >
+          <div className="pagination__circle"></div>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Pagination
+export default Pagination;

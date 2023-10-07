@@ -2,7 +2,10 @@ import React from 'react'
 import Proyectos from './Proyectos/Proyectos'
 function ProjectPage() {
   return (<>
-    <Proyectos></Proyectos>
+  <div className="project-page">
+  <Proyectos></Proyectos>
+  </div>
+   
   </>
   
   )

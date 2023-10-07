@@ -6,20 +6,37 @@ $colores : (
     "amarillo" : rgb(253, 184, 36),
     "verde" : #119397,
     "lineas" : #e0d2b2,
-    "intro" : #f7f5f1,
+    "intro" : #f9f7f4,
     "marron" : #522e2c,
+
 );
 
 $fuentes : (
     "primaria" : Lunasima,
     "secundaria": Caveat,
+    "terciario" : Merriweather,
+    "cuaternaria" : Merriweather Sans
 );
 
+$sombras : (
+  "negra" :  rgba(0, 0, 0, 0.295),
+ 
+);
+
+html{
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+
 body {
-    font-family: map-get($map: $fuentes, $key: primaria);
+    font-family: map-get($map: $fuentes, $key: terciario);
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 p {
     color: map-get($map: $colores, $key: terciario);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }

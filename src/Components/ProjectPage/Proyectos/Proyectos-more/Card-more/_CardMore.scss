@@ -1,12 +1,12 @@
 @use 'src/styles/base/_settings.scss' as *;
 
 .card-more{
-    background-color: white;
-    box-shadow: 4px 4px 5px 1px rgb(0, 0, 0) ;
-    padding: 1rem;
-    width: 80vw;
-    max-width: 30rem;
-    height: 20rem;
+    background-color: map-get($map: $colores, $key: primario);
+ 
+    padding: 2rem;
+    
+    max-width: 25rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,8 +16,8 @@
         display: flex;
         justify-content: space-between;
         font-size: 2.5rem;
-        margin-bottom: .5rem;
-        color: map-get($map: $colores, $key: primario);
+        margin-bottom: 1rem;
+        color: white;
 
         div{
             display: flex;
@@ -29,25 +29,26 @@
 
     p{
         font-size: 1.2rem;
-        color: map-get($map: $colores, $key: primario);
+        color: white;
         font-weight: 700;
 
         &:nth-child(3){
             font-size: 1.4rem;
             font-weight: 400;
+            color: map-get($map: $colores, $key: white);
         }
 
         &:nth-child(2){
             color: map-get($map: $colores, $key: secundario);
             font-size: 1.6rem;
             font-weight: 700;
-            margin-bottom: .5rem;
+            margin: .5rem 0rem;
         }
     }
 
     &__tec{
         align-self: end;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: map-get($map: $colores, $key: terciario);
         font-weight: 700;
     }

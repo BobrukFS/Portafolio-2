@@ -2,32 +2,15 @@
 
 .project-main{
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    align-items: center;
-    position: relative;
-    
-    .arrow{
-        position: absolute;
-        z-index: 5;
-  
-       bottom: -5rem;
-       left: -3rem;
-        width: 9rem;
-        transform: rotate(50);
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    max-width: 130rem;
+
+}
+
+@media (min-width: 1024px) { 
+    .project-main{
+        margin-bottom: 15rem;
     }
 }
-
- 
-.project-complement{
-    display: flex;
-    margin-top: 2.5rem;
-}
-
-.swiper{
-    border-radius: .9rem;
-
-   background-color: transparent;
-}
-
-

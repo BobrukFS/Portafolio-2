@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: map-get($map: $colores, $key: primario);
+   
     padding: 2rem;
 
     &__title{
@@ -13,12 +13,70 @@
         margin-bottom: 2rem;
     }
 
-    &__container{
-        gap: 2rem;
+
+    .swiper{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        
+        .swiper-slide{
+            width: fit-content;
+        }
+    }
+
+         
+    &__btn{ 
+            margin-top: 2rem;
+            background-color: white;
+            border: none;
+            color: map-get($map: $colores, $key: secundario);
+            padding: .5rem 1rem;
+            font-weight: 700;
+            border-radius: .7rem;
+            font-size: 1.8rem;
+            box-shadow: 4px 4px 5px 1px rgba(0, 0, 0, 0.274) ;
+    }
+
+    &__card-git{
+        width: 25rem;
+        height: 25rem;
+        background-color: map-get($map: $colores, $key: primario);
         display: flex;
         flex-direction: column;
-     
-  
-        
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border: 3px dashed map-get($map: $colores, $key: terciario);
+
+        &:hover{
+            background-color: map-get($map: $colores, $key: secundario);
+            border: none;
+        }
     }
+
+    &__icon-git{
+        font-size: 7rem;
+        color: white;
+    }
+
+    &__p-git{
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 700;
+    }
+    
+}
+
+@media (min-width: 768px) { 
+    .proyectos-more{
+        padding: 0 4rem;
+}
+}
+
+@media (min-width: 1024px ) { 
+    .proyectos-more{
+        padding: 0 4rem;
+        max-width: 120rem;
+}
 }

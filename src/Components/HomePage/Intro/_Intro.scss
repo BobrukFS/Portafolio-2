@@ -1,37 +1,41 @@
 @use 'src/styles/base/_settings.scss' as *;
 
 .intro {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 2rem 0rem;
-    padding-top: 10rem;
-    background-color: map-get($map: $colores, $key: intro);
-    
+    padding: 14rem 2rem 2rem;
+    background-color: white;
+
 
     div{
         display: flex;
         flex-direction: column;
+        max-width: 43rem;
     }
 
-    &__p{
-        font-size: 1.6rem;
+    &__p {
+        font-size: 1.8rem;
         margin: .5rem 0rem;
-        font-weight: 400;
+        font-weight: 700;
+        width: fit-content;
 
         &:nth-child(3){
             color: map-get($map: $colores, $key: secundario);
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
     }
 
     &__title {
-        font-size: 3.5rem;
+        font-size: 5rem;
         color: map-get($map: $colores, $key: primario);
         font-weight: 700;
+        width: fit-content;
     }
 
     &__desc{
@@ -39,14 +43,12 @@
         padding-left: 1rem;
         border-left: 2px dashed map-get($map: $colores, $key: lineas);
         margin-top: .5rem;
-        max-width: 30rem;
     }
 
     .intro__container-btn{
-
         flex-direction: row;
         gap: 2rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
         align-self: end;
     }
 
@@ -58,19 +60,124 @@
         padding: .5rem 1rem;
         border-radius: .8rem;
         font-weight: 700;
+        text-decoration: none;
 
         &:hover{
             transform: scale(1.1);
+            cursor: pointer;
         }
 
         &:nth-child(2){
-            border: 1px solid map-get($map: $colores, $key: marron);
+            border: 1px solid map-get($map: $colores, $key: secundario);
             background-color: white;
-            color: map-get($map: $colores, $key: marron);
+            color: map-get($map: $colores, $key: secundario);
         
         }
      
     }
 
-   
+    img{
+        max-width: 50rem;
+        width: 100%;
+        
+       
+    }
+
+}
+
+
+
+@media (min-width: 768px) { 
+
+    .intro{
+        min-height: 100vh;
+        flex-direction: row;
+        align-items: center;
+        padding: 14rem 4rem 2rem;
+
+        div{
+            min-width: 33rem;
+            width: 100%;
+            max-width: 60rem;
+        }
+
+        &__title{
+            font-size: clamp(7rem, 8vw ,10rem);
+        }
+
+        &__p{
+            font-size: clamp(2.2rem, 3vw ,3.6rem); 
+
+            &:nth-child(3){
+                font-size: clamp(2.6rem, 2vw ,4rem); 
+            }
+        }
+
+        &__desc{
+            font-size: clamp(2rem, 2vw ,3rem); 
+        }
+
+        &__btn{
+            font-size: clamp(2rem, 2vw ,3rem); 
+        }
+
+        img{
+           width: 60%;
+           max-width: 85rem;
+        }
+    }
+
+ 
+}
+
+
+@media (min-width: 1024px) { 
+    .intro{
+        padding: 0rem 4rem;
+        width: 100%;
+        min-width: 100%;
+ 
+    }
+
+    
+}
+
+@media (min-width: 1440px) { 
+    .intro{
+        padding: 0rem 12rem 2rem;
+
+        div{
+            max-width: 60rem;
+        }
+
+        &__title{
+            font-size: 10rem;
+        }
+
+        &__p{
+            font-size: 3.6rem;
+
+            &:nth-child(3){
+                font-size: 4rem;
+            }
+        }
+
+        &__desc{
+            font-size: 3rem;
+        }
+
+        &__btn{
+            font-size: 3rem;
+        }
+
+       
+
+        
+    }
+}
+
+@media (min-width: 1920px) { 
+    .intro{
+        padding: 0rem 20rem 2rem;
+    }
 }

@@ -3,7 +3,10 @@ import Intro from './Intro/Intro'
 function HomePage() {
   return (
     <>
-         <Intro></Intro>
+      <div className='home-page'>
+          <Intro></Intro>
+      </div>
+         
     </>
   )
 }

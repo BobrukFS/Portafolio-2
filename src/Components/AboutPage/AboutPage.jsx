@@ -4,7 +4,10 @@ import About from './About/About'
 function AboutPage() {
   return (
     <>
-      <About></About>
+    <div className="about-page">
+    <About></About>
+    </div>
+   
     </>
   )
 }

@@ -13,6 +13,7 @@
         background-color: map-get($map: $colores, $key: lineas);
         border-radius: 50%;
         margin: .5rem;
+        transition: all .5s ease-in;
     }
 
     &__border{
@@ -20,6 +21,7 @@
         width: fit-content;
         border-radius: 50%;
         position: relative;
+        transition: all .5s ease-in;
 
         &::after{
             position: absolute;
@@ -35,4 +37,15 @@
         }
     }
 
+   
+}
+
+.active{
+    border: 1px dashed map-get($map: $colores, $key: secundario);
+    .pagination{
+        &__circle{
+            background-color: map-get($map: $colores, $key: secundario);
+            
+        }
+    }
 }
